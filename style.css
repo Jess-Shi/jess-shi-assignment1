@@ -83,7 +83,7 @@ p {
 }
 
 .wrapper {
-    max-width: 1440px;
+    max-width: 1536px;
     width: 80%;
     margin: 0 auto;
 }
@@ -203,17 +203,13 @@ main nav {
 
 /* blog styles */
 
-.wrapper-wide {
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .blog {
     background: #C3D3CB;
 }
 
-.blog .wrapper-wide {
+.blog .wrapper {
+    max-width: 1920px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -323,7 +319,7 @@ address {
     }
 
 
-    .blog .wrapper-wide {
+    .blog .wrapper {
         flex-direction: column;
     }
 
