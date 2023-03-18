@@ -108,23 +108,18 @@ a {
 a::after {
     content: "";
     position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
+    height: 3px;
     background: #FCFCFC;
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
 }
 
 a:hover::after,
 a:focus::after {
+    transform: scaleX(1);
     width: 100%;
-}
-
-button:hover,
-button:focus {
-    opacity: 0.8;
-    cursor: pointer;
 }
 
 span {
@@ -298,8 +293,14 @@ footer nav {
 .subscribe .button-style {
     background: #000000;
     color: #FCFCFC;
-    border: 0;
+    border: solid 3px #000000;
+    padding: 5px 0;
     line-height: 1.45rem;
+}
+
+.subscribe .button-style:hover,
+.subscribe .button-style:focus {
+    border: solid 3px #FCFCFC;
 }
 
 .subscribe input {
@@ -331,6 +332,16 @@ address {
 /* responsive design */
 
 @media (max-width: 1260px) {
+
+
+    h1 {
+        font-size: calc(6rem - 1 / 3vw);
+    }
+
+
+    .wrapper {
+        width: 90%;
+    }
 
     .gallery ul {
         justify-content: center;
