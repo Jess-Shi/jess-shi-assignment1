@@ -44,18 +44,19 @@ h3 {
 
 h4 {
     font-size: 1.75rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
     color: #152D20;
 }
 
-h5 {
+.main-nav {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.75rem;
+    line-height: 2rem;
     text-transform: uppercase;
-    color: #FCFCFC;
+    text-align: center;
 }
 
-h6,
+h5,
 .top-nav,
 .bot-nav,
 .button-style {
@@ -73,7 +74,7 @@ h6,
 
 /* global positioning and decorative styles */
 
-h1, h2, h3, h4, h5, h6, ul, input {
+h1, h2, h3, h4, h5, ul, input {
     margin: 0;
     padding: 0;
 }
@@ -100,6 +101,30 @@ ul {
 
 a {
     text-decoration: none;
+    color: #FCFCFC;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: #FCFCFC;
+    transition: width 0.3s ease;
+}
+
+a:hover::after,
+a:focus::after {
+    width: 100%;
+}
+
+button:hover,
+button:focus {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 span {
@@ -131,10 +156,6 @@ header .top-nav {
     margin: 20px 30px 100px 0;
 }
 
-.top-nav a {
-    color: #FCFCFC;
-}
-
 /* about styles */
 
 .about {
@@ -160,8 +181,12 @@ header .top-nav {
     background: #FCFCFC;
 }
 
-.about .button-style a {
+.about a {
     color: #152D20;
+}
+
+.about a::after {
+    background: #152D20;
 }
 
 /* gallery styles */
@@ -172,8 +197,6 @@ header .top-nav {
 }
 
 .gallery .wrapper {
-    display: flex;
-    flex-direction: column;
     padding: 100px 0;
 }
 
@@ -221,11 +244,11 @@ main nav {
 
 .zebra-text {
     order: -10;
-    padding: 0 10%;
+    padding: 0 7% 0 10%;
 }
 
 .bond-text {
-    padding: 0 10%;
+    padding: 0 10% 0 7%;
 }
 
 .blog .button-style {
