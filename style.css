@@ -203,17 +203,17 @@ main nav {
 
 /* blog styles */
 
-/* .wrapper-wide {
+.wrapper-wide {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
-} */
+}
 
 .blog {
     background: #C3D3CB;
 }
 
-.blog .wrapper {
+.blog .wrapper-wide {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -225,11 +225,11 @@ main nav {
 
 .zebra-text {
     order: -10;
-    padding-right: 50px;
+    padding: 0 10%;
 }
 
 .bond-text {
-    padding-left: 50px;
+    padding: 0 10%;
 }
 
 .blog .button-style {
@@ -306,6 +306,7 @@ address {
     background: #000000;
     text-align: center;
     padding: 10px 0 15px 0;
+    margin: 0;
 }
 
 /* responsive design */
@@ -322,7 +323,7 @@ address {
     }
 
 
-    .blog .wrapper {
+    .blog .wrapper-wide {
         flex-direction: column;
     }
 
