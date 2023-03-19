@@ -66,10 +66,11 @@ h5,
 }
 
 .button-style {
+    display: block;
     font-size: 0.9rem;
     text-align: center;
-    width: 156px;
-    padding: 8px 0;
+    width: 180px;
+    padding: 12px 0;
 }
 
 /* global positioning and decorative styles */
@@ -80,7 +81,7 @@ h1, h2, h3, h4, h5, ul, input {
 }
 
 p {
-    margin: 20px 0 0 0;
+    margin: 20px 0;
 }
 
 .wrapper {
@@ -133,7 +134,7 @@ fieldset {
 /* header styles */
 
 header {
-    background: #C3D3CB url(./animal-land-assets/image-1.jpg) center / cover no-repeat;
+    background: #C3D3CB url(./animal-land-assets/image-1.jpg) center / cover no-repeat fixed;
     height: 100vh;
     color: #FCFCFC;
 }
@@ -143,7 +144,7 @@ header .wrapper {
     flex-direction: column;
 }
 
-header .top-nav {
+.top-nav {
     display: flex;
 }
 
@@ -203,7 +204,7 @@ header .top-nav {
 }
 
 .gallery li {
-    width: 31%;
+    width: calc(100%/3 - 30px);
     min-width: 300px;
 }
 
@@ -293,19 +294,19 @@ footer nav {
 .subscribe .button-style {
     background: #000000;
     color: #FCFCFC;
-    border: solid 3px #000000;
-    padding: 5px 0;
+    border: solid 4px #000000;
+    padding: 8px 0;
     line-height: 1.45rem;
 }
 
 .subscribe .button-style:hover,
 .subscribe .button-style:focus {
-    border: solid 3px #FCFCFC;
+    border: solid 4px #FCFCFC;
 }
 
 .subscribe input {
     width: 360px;
-    height: 45px;
+    height: 53px;
     padding-left: 30px;
 }
 
@@ -333,23 +334,44 @@ address {
 
 @media (max-width: 1260px) {
 
-
-    h1 {
-        font-size: calc(6rem - 1 / 3vw);
-    }
-
-
     .wrapper {
         width: 90%;
     }
 
+
+    .about .wrapper {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .suzie-image {
+        padding: 0;
+    }
+
+    .suzie-text {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .gallery .wrapper {
+        padding: 40px 0;
+    }
+
     .gallery ul {
-        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .gallery ul :nth-child(3) {
+        display: none;
     }
 
     .gallery li {
-        width: 50%;
-        padding: 20px;
+        width: calc(100%/2 - 10px);
+        min-width: 0;
     }
 
 
@@ -357,24 +379,34 @@ address {
         flex-direction: column;
     }
 
-    .zebra-text {
+    .zebra-text,
+    .bond-text {
         order: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
     }
 
 
     footer .wrapper {
         flex-direction: column;
-        align-items: center;
         padding: 40px 0;
     }
 
     .bot-nav {
         display: flex;
+        justify-content: space-evenly;
     }
 
     .bot-nav li {
         font-size: 0.9rem;
-        margin: 0 20px 40px 20px;
+        margin: 0 0 40px 0;
+    }
+
+    .subscribe {
+        text-align: center;
     }
 
     fieldset {
@@ -383,6 +415,7 @@ address {
 
     .subscribe input {
         padding: 0;
+        width: 80vw;
     }
 
     input::placeholder {
@@ -390,13 +423,36 @@ address {
     }
 
     .subscribe .button-style {
-        width: 360px;
+        width: 80vw;
         margin-top: 5px;
     }
 
     .contact {
         text-align: center;
         margin-top: 40px;
+    }
+
+}
+
+@media (max-width: 1080px) {
+
+    html {
+        font-size: max(16px, 2vw);
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    header {
+        background-position: -420px 0;
+    }
+
+    .top-nav {
+        display: none;
     }
 
 }
