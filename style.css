@@ -330,6 +330,19 @@ address {
     margin: 0;
 }
 
+/* experimental collapsible menu styles */
+
+input[type=checkbox] {
+    appearance: none;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    cursor: pointer;
+    background: url(./icons/icons8-menu-60.png) center / cover no-repeat;
+    display: none;
+}
+
 /* responsive design */
 
 @media (max-width: 1260px) {
@@ -440,19 +453,51 @@ address {
         font-size: max(16px, 2vw);
     }
 
-    h1 {
-        font-size: 3rem;
-        line-height: 3rem;
-        text-align: left;
-        margin-top: 20px;
-    }
-    
     header {
         background-position: -420px 0;
     }
 
+    header .wrapper {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        text-align: left;
+    }
+
+    header .collapsible-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
     .top-nav {
-        display: none;
+        flex-direction: column;
+        text-align: right;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .top-nav li {
+        margin: 0;
+    }
+
+    input[type=checkbox] {
+        display: block;
+    }
+
+    input:checked ~ .top-nav {
+        max-height: 100%;
+    }
+
+
+    .main-nav {
+        flex-direction: column;
     }
 
 }
