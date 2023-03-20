@@ -347,8 +347,56 @@ input[type=checkbox] {
 
 @media (max-width: 1260px) {
 
+    html {
+        font-size: max(16px, 2vw);
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        text-align: left;
+    }
+
     .wrapper {
         width: 90%;
+    }
+
+    header {
+        background: #C3D3CB url(./animal-land-assets/header-smallscreen.jpg) center / cover no-repeat fixed;
+    }
+
+    header .wrapper {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    header .collapsible-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .top-nav {
+        flex-direction: column;
+        text-align: right;
+        max-height: 0;
+        max-width: 0;
+        overflow: hidden;
+        transition: max-height 1s, max-width 1s;
+    }
+
+    .top-nav li {
+        margin: 0 5px 0 0;
+    }
+
+    input[type=checkbox] {
+        display: block;
+    }
+
+    input:checked ~ .top-nav {
+        max-height: 100%;
+        max-width: 100%;
     }
 
 
@@ -449,51 +497,6 @@ input[type=checkbox] {
 
 @media (max-width: 1080px) {
 
-    html {
-        font-size: max(16px, 2vw);
-    }
-
-    header {
-        background-position: -420px 0;
-    }
-
-    header .wrapper {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        padding-top: 20px;
-    }
-
-    h1 {
-        font-size: 3rem;
-        line-height: 3rem;
-        text-align: left;
-    }
-
-    header .collapsible-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    
-    .top-nav {
-        flex-direction: column;
-        text-align: right;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    .top-nav li {
-        margin: 0;
-    }
-
-    input[type=checkbox] {
-        display: block;
-    }
-
-    input:checked ~ .top-nav {
-        max-height: 100%;
-    }
 
 
     .main-nav {
