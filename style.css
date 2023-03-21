@@ -377,19 +377,35 @@ input[type=checkbox] {
 
 @media (max-width: 1260px) {
 
+    .wrapper {
+        width: 90%;
+    }
+
+    /* typographic */
+
     html {
         font-size: max(16px, 2vw);
     }
 
     h1 {
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+        font-size: 2.75rem;
+        line-height: 3rem;
         text-align: left;
     }
 
-    .wrapper {
-        width: 90%;
+    h2 {
+        font-size: 2.4rem;
     }
+
+    h3 {
+        font-size: 2.25rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    /* header */
 
     header {
         background: #C3D3CB url(./animal-land-assets/header-smallscreen.jpg) center / cover no-repeat fixed;
@@ -433,6 +449,7 @@ input[type=checkbox] {
         display: none;
     }
 
+    /* about */
 
     .about .wrapper {
         flex-direction: column;
@@ -451,6 +468,7 @@ input[type=checkbox] {
         text-align: center;
     }
 
+    /* gallery */
 
     .gallery .wrapper {
         padding: 40px 0;
@@ -469,6 +487,7 @@ input[type=checkbox] {
         min-width: 0;
     }
 
+    /* blog */
 
     .blog .wrapper {
         flex-direction: column;
@@ -484,6 +503,7 @@ input[type=checkbox] {
         padding: 40px 20px;
     }
 
+    /* footer */
 
     footer .wrapper {
         flex-direction: column;
@@ -497,7 +517,7 @@ input[type=checkbox] {
 
     .bot-nav li {
         font-size: 0.9rem;
-        margin: 0 0 40px 0;
+        margin-bottom: 40px;
     }
 
     .subscribe {
@@ -509,8 +529,9 @@ input[type=checkbox] {
     }
 
     .subscribe input {
-        padding: 0;
         width: 80vw;
+        height: 50px;
+        padding: 0;
     }
 
     input::placeholder {
@@ -519,7 +540,8 @@ input[type=checkbox] {
 
     .subscribe .button-style {
         width: 80vw;
-        margin-top: 5px;
+        height: 50px;
+        margin-top: 10px;
     }
 
     .contact {
@@ -530,6 +552,8 @@ input[type=checkbox] {
 }
 
 @media (max-width: 600px) {
+
+    /* main nav */
 
     .main-nav {
         flex-direction: column;
