@@ -134,7 +134,7 @@ fieldset {
 /* header styles */
 
 header {
-    background: #C3D3CB url(./animal-land-assets/image-1.jpg) center / cover no-repeat fixed;
+    background: #C3D3CB url(./animal-land-assets/image-1.jpg) center / cover no-repeat;
     height: 100vh;
     color: #FCFCFC;
 }
@@ -408,7 +408,7 @@ input[type=checkbox] {
     /* header */
 
     header {
-        background: #C3D3CB url(./animal-land-assets/header-smallscreen.jpg) center / cover no-repeat fixed;
+        background: #C3D3CB url(./animal-land-assets/header-smallscreen.jpg) center / cover no-repeat;
     }
 
     header .wrapper {
