@@ -134,7 +134,7 @@ fieldset {
 /* header styles */
 
 header {
-    background: #C3D3CB url(./animal-land-assets/image-1.jpg) center / cover no-repeat;
+    background: #C3D3CB url(./animal-land-assets/image-1.jpg) center / cover no-repeat fixed;
     height: 100vh;
     color: #FCFCFC;
 }
