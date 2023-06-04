@@ -118,7 +118,7 @@ a::after {
 }
 
 a:hover::after,
-a:focus::after {
+a:focus-visible::after {
     transform: scaleX(1);
     width: 100%;
 }
@@ -327,7 +327,7 @@ footer nav {
 }
 
 .subscribe .button-style:hover,
-.subscribe .button-style:focus {
+.subscribe .button-style:focus-visible {
     border: solid 4px #FCFCFC;
 }
 
